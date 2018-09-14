@@ -74,6 +74,18 @@ point I returned to the new line model to work more on the accuracy of this mode
 
 ![Underestimated Sales](https://github.com/JoekingCooper/btakehometask/blob/master/images/underestimatedsales.png)
 
+### 6. Estimate New Line Sales Return
+
+I thought that a Gaussian distribution might not be the best idea when I was first modelling, however it is an easy model to fit and understand, with fewer parameters. This time I decided to try getting a Poisson distribution to work, I also noticed that I had used the wrong file in the first estimate and also given the model a skewed dataset, so it was fitting to £35 = 0 counts, when it should have been ignoring £35. With these two errors corrected and the Poisson working I ran the model again.
+
+I also thought that the binned values were not representing the data very well so I reduced the number of bins and refit the distribution. Again, this gives a simple function that can be used to estimate the sales of the new line, assuming people purchase products in a roughly poisson distribution.
+
+Notebook 5. now has a more accurate sales prediction.
+
+![Underestimated Sales](https://github.com/JoekingCooper/btakehometask/blob/master/images/5estimatedsales.png)
+
+### 7. Forecasting with a Bespoke Model
+
 
 
 Credits
