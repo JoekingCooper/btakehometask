@@ -36,7 +36,7 @@ This notebook just plots the data in different ways, mostly to get used to the d
 At this point I also noticed that the task was slightly wrong. The task had asked for us to investigate a new line between £20-30 in price, as the client didn't have a product in this price band. However upon investigation of the data I noticed that a product must exist in this price band and that the investigation was supposed to be done for a product in the £30-40 price band. The task provider confirmed this was true.
 
 
-![Missing product in band £30-40](https://github.com/JoekingCooper/btakehometask/blob/master/images/productBrand.png)
+![Missing product in band £30-40](btakehometask/images/productBrand.png)
 
 
 This investigation also confirmed that 'total_products' was missing for the Mobile data. This is a key piece of information needed for forecasting sales in the last two weeks of August.
