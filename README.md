@@ -100,6 +100,13 @@ Obviously the errors on this prediction seem a little small so I want to revisit
 
 ### 8. Forecasting with a Bespoke Model, with corrected errors
 
+The errors were mostly corrected using the uncertainties package in python; this isn't the most reliable package and I wouldn't fully trust it, however it is fine for simple forecasting. To be thorough, you would really need to do a grid search method, but this takes too much time.
+
+I had also been trying to take out weekly trends in the previous notebook and felt that this shouldn't really be necessary with the new model. So there are some differences in the forecast distributions and the errors are much more accurate. The forecast result is shown below:
+
+![SecondForecast](https://github.com/JoekingCooper/btakehometask/blob/master/images/SecondForecast.png)
+
+I forecast 1602 sales in the new line over the last two weeks of August, as well as a revenue (assuming an average price of £35) of £56,071.
 
 Credits
 -------
