@@ -36,7 +36,7 @@ This notebook just plots the data in different ways, mostly to get used to the d
 At this point I also noticed that the task was slightly wrong. The task had asked for us to investigate a new line between £20-30 in price, as the client didn't have a product in this price band. However upon investigation of the data I noticed that a product must exist in this price band and that the investigation was supposed to be done for a product in the £30-40 price band. The task provider confirmed this was true.
 
 
-.. image:: https://github.com/JoekingCooper/btakehometask/blob/master/images/productBrand.png?raw=true
+![Missing band £30-40](https://github.com/JoekingCooper/btakehometask/blob/master/images/productBrand.png)
 
 
 This investigation also confirmed that 'total_products' was missing for the Mobile data. This is a key piece of information needed for forecasting sales in the last two weeks of August.
@@ -50,17 +50,19 @@ avg_price and total_products are more important to the overall calculation, so I
 Imputing total_products was a little more involved. I realised that the order number must be less than the total products and we had the order number for all sales (including Mobile data). So I calculated the mean total_products per num_orders for the first month. Then I used a simple apply to make the missing total_products = num_orders * mean. This gave a good estimate of the total products sold, these are the two functions used for the calculation:
 
 """
-    df_e=df
-    def calc_orderno_totprod_relationship(row):
-        return row['total_products']/row['num_orders']
-    tot_product_imputation=np.mean(df_tp_noNaNs.apply(lambda row:calc_orderno_totprod_relationship(row),axis=1))
+df_e=df
+def calc_orderno_totprod_relationship(row):
+    return row['total_products']/row['num_orders']
+tot_product_imputation=np.mean(df_tp_noNaNs.apply(lambda row:calc_orderno_totprod_relationship(row),axis=1))
+"""
 
-    def impute_tp(row):
-        if pd.notnull(row['total_products'])==False:
-            return int(row['num_orders']*tot_product_imputation+0.5)#+0.5 is to round up instead of down
-        else:
-            return row['total_products']
-    df_e['total_products']=df.apply(lambda row: impute_tp(row),axis=1)
+"""
+def impute_tp(row):
+    if pd.notnull(row['total_products'])==False:
+        return int(row['num_orders']*tot_product_imputation+0.5)#+0.5 is to round up instead of down
+     else:
+        return row['total_products']
+df_e['total_products']=df.apply(lambda row: impute_tp(row),axis=1)
 """
 
 Credits
