@@ -1,6 +1,6 @@
-=============
-BTakeHomeTask
-=============
+
+# BTakeHomeTask
+
 
 A take home task, completed for a job application.
 
@@ -8,13 +8,13 @@ A take home task, completed for a job application.
 * Free software: MIT license
 
 
-Summary
---------
+## Summary
+-----------
 The goal of this project is to impute missing data, forecast two weeks of sales and to also forecast the sales of a brand new line, with no data on it.
 
 This project was completed primarily in Jupyter Notebooks, with Cookiecutter used to populate the repository. If there were more time this work could be turned into a python package.
 
-Initial Plan
+## Initial Plan
 ------------
 To complete this task the plan was to complete the following sub-tasks in roughly the following order:
 
@@ -25,11 +25,11 @@ To complete this task the plan was to complete the following sub-tasks in roughl
 * Forecast sales for the last two weeks
 * Apply this forecast to the new line
 
-Notebook Guide
+## Notebook Guide
 --------------
 This section will provide a guide to the notebooks in btakehometask/notebooks/
 
-**1 Initial Exploration**
+### 1 Initial Exploration
 
 This notebook just plots the data in different ways, mostly to get used to the data and to look at where the missing data is. Found that there was missing data in 4 fields: Country, County, avg_prices and total_products.
 
@@ -41,7 +41,7 @@ At this point I also noticed that the task was slightly wrong. The task had aske
 
 This investigation also confirmed that 'total_products' was missing for the Mobile data. This is a key piece of information needed for forecasting sales in the last two weeks of August.
 
-**Imputing NaNs**
+### Imputing NaNs
 
 To impute the NaNs for Country and County I thought about doing something complicated like using a dictionary to match the city and region with the correct country and county. This could be done for a real dataset, but considering the task was to forecast sales, independant of region/city/county/country it seemed silly to waste a lot of time on this. So instead I just imputed missing_country and missing_county to these columns if there was no value.
 
@@ -49,7 +49,7 @@ avg_price and total_products are more important to the overall calculation, so I
 
 Imputing total_products was a little more involved. I realised that the order number must be less than the total products and we had the order number for all sales (including Mobile data). So I calculated the mean total_products per num_orders for the first month. Then I used a simple apply to make the missing total_products = num_orders * mean. This gave a good estimate of the total products sold, these are the two functions used for the calculation:
 
-::
+"""
     df_e=df
     def calc_orderno_totprod_relationship(row):
         return row['total_products']/row['num_orders']
@@ -61,7 +61,7 @@ Imputing total_products was a little more involved. I realised that the order nu
         else:
             return row['total_products']
     df_e['total_products']=df.apply(lambda row: impute_tp(row),axis=1)
-
+"""
 
 Credits
 -------
