@@ -28,8 +28,14 @@ To complete this task the plan was to complete the following sub-tasks in roughl
 Notebook Guide
 --------------
 This section will provide a guide to the notebooks in btakehometask/notebooks/
-** 1 Initial Exploration **
-This notebook just plots the data in different ways, mostly to get used to the data and to look at where the missing data is. Found that there was missing data in 4 fields: Country, County, avg_prices and total_products
+
+**1 Initial Exploration**
+
+This notebook just plots the data in different ways, mostly to get used to the data and to look at where the missing data is. Found that there was missing data in 4 fields: Country, County, avg_prices and total_products.
+
+At this point I also noticed that the task was slightly wrong. The task had asked for us to investigate a new line between £20-30 in price, as the client didn't have a product in this price band. However upon investigation of the data I noticed that a product must exist in this price band and that the investigation was supposed to be done for a product in the £30-40 price band. The task provider confirmed this was true.
+
+This investigation also confirmed that 'total_products' was missing for the Mobile data. This is a key piece of information needed for forecasting sales in the last two weeks of August.
 
 
 Credits
