@@ -17,12 +17,13 @@ This project was completed primarily in Jupyter Notebooks, with Cookiecutter use
 Initial Plan
 ------------
 To complete this task the plan was to complete the following sub-tasks in roughly the following order:
-*Impute the missing data for the Country, County, avg_prices
-*Impute missing total products - this is the most important field
-*Create an estimate for missing price band
-*Investiagte which platforms have the best sales
-*Forecast sales for the last two weeks
-*Apply this forecast to the new line
+
+* Impute the missing data for the Country, County, avg_prices
+* Impute missing total products - this is the most important field
+* Create an estimate for missing price band
+* Investiagte which platforms have the best sales
+* Forecast sales for the last two weeks
+* Apply this forecast to the new line
 
 Notebook Guide
 --------------
