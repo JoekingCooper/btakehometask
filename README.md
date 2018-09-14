@@ -86,6 +86,11 @@ Notebook 5. now has a more accurate sales prediction.
 
 ### 7. Forecasting with a Bespoke Model
 
+Now forecast with the second method, where I model the current dataset and try to predict using that model. I decided to fit multiple sine functions to the data, to represent the weekly and monthly trends. This is done in quite a simplistic but novel way but dampening noise in different ways using a moving average function. This makes long term trends and short term trends easier to see.
+
+This function is then fitted to the data and can be used to predict further into the future.
+
+![FirstSinFit](https://github.com/JoekingCooper/btakehometask/blob/master/images/FirstSinFit.png)
 
 
 Credits
