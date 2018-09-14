@@ -72,6 +72,7 @@ I matched the first two weeks of august to the first two weeks of July using a s
 This is a fairly crude method, but it is actually a fairly accurate method because of the limited amount of data avalible. I then used the model from notebook 3. to forecast sales for the new line. I noticed that the sales where being massively underestimated, so at this
 point I returned to the new line model to work more on the accuracy of this model.
 
+![Underestimated Sales](https://github.com/JoekingCooper/btakehometask/blob/master/images/underestimatedsales.png)
 
 
 
