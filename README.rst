@@ -2,31 +2,21 @@
 BTakeHomeTask
 =============
 
-
-.. image:: https://img.shields.io/pypi/v/btakehometask.svg
-        :target: https://pypi.python.org/pypi/btakehometask
-
-.. image:: https://img.shields.io/travis/JoekingCooper/btakehometask.svg
-        :target: https://travis-ci.org/JoekingCooper/btakehometask
-
-.. image:: https://readthedocs.org/projects/btakehometask/badge/?version=latest
-        :target: https://btakehometask.readthedocs.io/en/latest/?badge=latest
-        :alt: Documentation Status
-
-
-
-
-A take home task, completed for job application
+A take home task, completed for a job application.
 
 
 * Free software: MIT license
-* Documentation: https://btakehometask.readthedocs.io.
 
 
-Features
+Summary
 --------
+The goal of this project is to impute missing data, forecast two weeks of sales and to also forecast the sales of a brand new line, with no data on it.
 
-* TODO
+This project was completed primarily in Jupyter Notebooks, with Cookiecutter used to populate the repository. If there were more time this work could be turned into a python package.
+
+Initial Plan
+------------
+
 
 Credits
 -------
