@@ -49,7 +49,7 @@ avg_price and total_products are more important to the overall calculation, so I
 
 Imputing total_products was a little more involved. I realised that the order number must be less than the total products and we had the order number for all sales (including Mobile data). So I calculated the mean total_products per num_orders for the first month. Then I used a simple apply to make the missing total_products = num_orders * mean. This gave a good estimate of the total products sold, these are the two functions used for the calculation:
 
-"""
+::
     df_e=df
     def calc_orderno_totprod_relationship(row):
         return row['total_products']/row['num_orders']
@@ -61,7 +61,7 @@ Imputing total_products was a little more involved. I realised that the order nu
         else:
             return row['total_products']
     df_e['total_products']=df.apply(lambda row: impute_tp(row),axis=1)
-"""
+
 
 Credits
 -------
