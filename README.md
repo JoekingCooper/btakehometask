@@ -51,7 +51,7 @@ Imputing total_products was a little more involved. I realised that the order nu
 
 ### 3. Estimate New Line Sales
 
-Here I've used the the avg_price to estimate the sales of a new line. This was basically done by fitting a Gaussian distribution to the abg_price histogram. This is quite crudely done initially and is returned to later to imporve the fit and to change the distribution. This is only needed after the forecasting is already done, so it's better to look at a few times. I looked at this before trying to forecast because I was concerned it might be difficult and timely and it may be needed to inform the forecasting process. Overall it was fairly simple to build.
+Here I've used the the avg_price to estimate the sales of a new line. This was basically done by fitting a Gaussian distribution to the avg_price histogram. This is quite crudely done initially and is returned to later to imporve the fit and to change the distribution. This is only needed after the forecasting is already done, so it's better to look at a few times. I looked at this before trying to forecast because I was concerned it might be difficult and timely and it may be needed to inform the forecasting process. Overall it was fairly simple to build.
 
 ### 4. Forecasting Process
 
