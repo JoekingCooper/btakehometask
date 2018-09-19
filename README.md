@@ -102,7 +102,7 @@ Obviously the errors on this prediction seem a little small so I want to revisit
 
 The errors were mostly corrected using the uncertainties package in python; this isn't the most reliable package and I wouldn't fully trust it, however it is fine for simple forecasting. To be thorough, you would really need to do a grid search method, but this takes too much time.
 
-I had also been trying to take out weekly trends in the previous notebook and felt that this shouldn't really be necessary with the new model. So there are some differences in the forecast distributions and the errors are much more accurate. The forecast result is shown below:
+This notebook should be almost identical to notebook 7, except for the change to error propagation.
 
 ![SecondForecast](https://github.com/JoekingCooper/btakehometask/blob/master/images/SecondForecast.png)
 
